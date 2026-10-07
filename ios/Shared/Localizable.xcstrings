@@ -151,6 +151,16 @@
         }
       }
     },
+    "Automatic re-unlock is off. Keep it forever with a one-time purchase in Lasso.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Automatisch opnieuw ontgrendelen staat uit. Houd het voor altijd met een eenmalige aankoop in Lasso."
+          }
+        }
+      }
+    },
     "Automatic re-unlock when the bike locks itself after a battery drop mid-ride": {
       "localizations": {
         "nl": {
@@ -571,12 +581,12 @@
         }
       }
     },
-    "Lasso can send a notification each time it re-unlocks your bike. This is optional, and you can change it later in Settings.": {
+    "Lasso can notify you each time it re-unlocks your bike, and once when your free trial ends. This is optional, and you can change it later in Settings.": {
       "localizations": {
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lasso kan een melding sturen telkens als het je fiets opnieuw ontgrendelt. Dit is optioneel en je kunt het later wijzigen in Instellingen."
+            "value": "Lasso kan je een melding sturen telkens als het je fiets opnieuw ontgrendelt, en één keer als je gratis proefperiode afloopt. Dit is optioneel en je kunt het later wijzigen in Instellingen."
           }
         }
       }
@@ -1353,6 +1363,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Lasso is van jou. Bedankt."
+          }
+        }
+      }
+    },
+    "Your Lasso trial has ended": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Je Lasso-proefperiode is afgelopen"
           }
         }
       }

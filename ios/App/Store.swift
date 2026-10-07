@@ -1,5 +1,6 @@
 import Foundation
 import RevenueCat
+import UserNotifications
 
 /// Purchases for the App Store build: a free 7-day trial and a one-time
 /// Lifetime unlock. Both are non-consumables in App Store Connect; the trial
@@ -140,9 +141,28 @@ final class Store: ObservableObject {
         let old = access
         access = new
         Self.cache(new)
+        Self.scheduleTrialEndNotification(for: new)
         if old != .unknown || new == .expired {
             EventLog.shared.add(.info, "Access changed: \(Self.describe(new))")
         }
+    }
+
+    /// A local notification at the end of the trial, so the rider learns that
+    /// automatic re-unlock is off before the next battery drop. Replaced on
+    /// every access change and removed once Lifetime is owned (or the trial
+    /// is already over). Silently does nothing without notification permission.
+    private static let trialEndNotificationID = "trialEnded"
+
+    private static func scheduleTrialEndNotification(for access: Access) {
+        let center = UNUserNotificationCenter.current()
+        center.removePendingNotificationRequests(withIdentifiers: [trialEndNotificationID])
+        guard case .trial(let endsAt) = access, endsAt > Date() else { return }
+        let content = UNMutableNotificationContent()
+        content.title = L10n.string("Your Lasso trial has ended")
+        content.body = L10n.string("Automatic re-unlock is off. Keep it forever with a one-time purchase in Lasso.")
+        content.sound = .default
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: max(1, endsAt.timeIntervalSinceNow), repeats: false)
+        center.add(UNNotificationRequest(identifier: trialEndNotificationID, content: content, trigger: trigger))
     }
 
     private static func access(from info: CustomerInfo) -> Access {

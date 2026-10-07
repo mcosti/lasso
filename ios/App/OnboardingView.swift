@@ -51,7 +51,7 @@ struct OnboardingView: View {
 
     private var notifications: some View {
         Page(symbol: "bell.badge.fill", title: "Know when it happens") {
-            Text("Lasso can send a notification each time it re-unlocks your bike. This is optional, and you can change it later in Settings.")
+            Text("Lasso can notify you each time it re-unlocks your bike, and once when your free trial ends. This is optional, and you can change it later in Settings.")
         }
     }
 
