@@ -17,7 +17,7 @@ android/.gradle/
 android/local.properties
 android/**/build/
 
-# Note: marketing/screenshots/captured/ is committed on purpose.
 
-# Private repo (marketing, internal docs, store copy, signing), nested with its own .git
+
+# Not part of this repository
 private/
