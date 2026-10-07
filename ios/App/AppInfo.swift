@@ -5,7 +5,9 @@ import Foundation
 enum AppInfo {
     static let name = "Lasso"
     /// Shown in Settings; the app is an independent project.
-    static let disclaimer = "Lasso is an independent app and is not affiliated with or endorsed by Cowboy SA. Cowboy is a trademark of its owner."
+    static var disclaimer: String {
+        L10n.string("Lasso is an independent app and is not affiliated with or endorsed by Cowboy SA. Cowboy is a trademark of its owner.")
+    }
     /// Empty hides the support button (open-source builds).
     static let supportEmail = "contact@costi.pro"
     static var version: String {

@@ -18,6 +18,15 @@ enum Demo {
         return args[i + 1]
     }
 
+    /// Language of a demo launch: English, so the screenshot pipeline keeps
+    /// producing English captures whatever the app or system setting, unless
+    /// `-lang nl` asks for the Dutch set.
+    static var language: String {
+        let args = ProcessInfo.processInfo.arguments
+        guard let i = args.firstIndex(of: "-lang"), i + 1 < args.count else { return "en" }
+        return args[i + 1]
+    }
+
     /// Mid-ride numbers, consistent across the home screen and the Live Activity.
     static var dashboard: Dashboard {
         var d = Dashboard()

@@ -18,13 +18,13 @@ enum ConnectionState: Equatable {
 
     var title: String {
         switch self {
-        case .bluetoothOff: "Bluetooth is off"
-        case .unauthorized: "Bluetooth access denied"
-        case .noBike: "No bike paired"
-        case .scanning: "Looking for bikes…"
-        case .waiting: "Waiting for the bike"
-        case .connecting: "Connecting…"
-        case .connected: "Connected"
+        case .bluetoothOff: L10n.string("Bluetooth is off")
+        case .unauthorized: L10n.string("Bluetooth access denied")
+        case .noBike: L10n.string("No bike paired")
+        case .scanning: L10n.string("Looking for bikes…")
+        case .waiting: L10n.string("Waiting for the bike")
+        case .connecting: L10n.string("Connecting…")
+        case .connected: L10n.string("Connected")
         }
     }
 }
@@ -571,9 +571,9 @@ final class BikeManager: NSObject, ObservableObject {
             settings.rideActive = true
             if lastUnlockSentAt.map({ Date().timeIntervalSince($0) < 10 }) == true {
                 reunlocks += 1
-                notify(title: "Bike unlocked again", body: "\(AppInfo.name) re-unlocked your bike.", onlyIf: settings.notifyOnReunlock)
+                notify(title: L10n.string("Bike unlocked again"), body: L10n.string("\(AppInfo.name) re-unlocked your bike."), onlyIf: settings.notifyOnReunlock)
             } else {
-                notify(title: "Bike unlocked", body: "", onlyIf: settings.notifyOnLockChange)
+                notify(title: L10n.string("Bike unlocked"), body: "", onlyIf: settings.notifyOnLockChange)
             }
         case .locked:
             let sinceMoving = Date().timeIntervalSince1970 - settings.lastMovingAt
@@ -587,7 +587,7 @@ final class BikeManager: NSObject, ObservableObject {
             } else {
                 settings.rideActive = false
                 log(.info, "Treating this as an intentional lock, ride ended")
-                notify(title: "Bike locked", body: "", onlyIf: settings.notifyOnLockChange)
+                notify(title: L10n.string("Bike locked"), body: "", onlyIf: settings.notifyOnLockChange)
             }
         case .unknown:
             break

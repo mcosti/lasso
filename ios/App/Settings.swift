@@ -17,28 +17,28 @@ enum AutoUnlockMode: String, CaseIterable, Identifiable {
 
     var title: String {
         switch self {
-        case .ride: "During a ride"
-        case .always: "Always"
-        case .off: "Off"
+        case .ride: L10n.string("During a ride")
+        case .always: L10n.string("Always")
+        case .off: L10n.string("Off")
         }
     }
 
     var explanation: String {
         switch self {
         case .ride:
-            "Re-unlocks the bike when it locks itself while you are riding, for example after a battery hiccup. Locking it on purpose, or the bike's own auto-lock when parked, is left alone."
+            L10n.string("Re-unlocks the bike when it locks itself while you are riding, for example after a battery hiccup. Locking it on purpose, or the bike's own auto-lock when parked, is left alone.")
         case .always:
-            "Unlocks the bike every time your phone connects to it, no matter how it got locked."
+            L10n.string("Unlocks the bike every time your phone connects to it, no matter how it got locked.")
         case .off:
-            "Only watches the bike and keeps the log. Use the buttons to lock and unlock by hand."
+            L10n.string("Only watches the bike and keeps the log. Use the buttons to lock and unlock by hand.")
         }
     }
 }
 
 /// A bundle of mechanism settings, so alternatives can be tried in one tap.
 struct MechanismPreset: Identifiable, Equatable {
+    /// Not translated: short names people mention in support mails.
     let name: String
-    let summary: String
     let withResponse: Bool
     let delay: Double
     let retries: Int
@@ -48,14 +48,25 @@ struct MechanismPreset: Identifiable, Equatable {
 
     var id: String { name }
 
+    /// Computed so it follows the in-app language picker.
+    var summary: String {
+        switch name {
+        case "Default": L10n.string("Write with response, 1 s after reconnect, 3 retries every 2 s.")
+        case "Patient": L10n.string("Gives a rebooting bike 3 s, then 5 retries every 3 s.")
+        case "Key fob": L10n.string("Write without response like the nRF fob, 0.5 s delay, 5 retries every 1 s.")
+        case "Aggressive": L10n.string("0.5 s delay, 6 retries every 1.5 s, polls the lock every 5 s and undoes any lock during a ride. Lock from this app.")
+        default: ""
+        }
+    }
+
     static let all: [MechanismPreset] = [
-        MechanismPreset(name: "Default", summary: "Write with response, 1 s after reconnect, 3 retries every 2 s.",
+        MechanismPreset(name: "Default",
                         withResponse: true, delay: 1, retries: 3, retryInterval: 2, pollInterval: 0, undoAnyLock: false),
-        MechanismPreset(name: "Patient", summary: "Gives a rebooting bike 3 s, then 5 retries every 3 s.",
+        MechanismPreset(name: "Patient",
                         withResponse: true, delay: 3, retries: 5, retryInterval: 3, pollInterval: 0, undoAnyLock: false),
-        MechanismPreset(name: "Key fob", summary: "Write without response like the nRF fob, 0.5 s delay, 5 retries every 1 s.",
+        MechanismPreset(name: "Key fob",
                         withResponse: false, delay: 0.5, retries: 5, retryInterval: 1, pollInterval: 0, undoAnyLock: false),
-        MechanismPreset(name: "Aggressive", summary: "0.5 s delay, 6 retries every 1.5 s, polls the lock every 5 s and undoes any lock during a ride. Lock from this app.",
+        MechanismPreset(name: "Aggressive",
                         withResponse: true, delay: 0.5, retries: 6, retryInterval: 1.5, pollInterval: 5, undoAnyLock: true),
     ]
 }
@@ -98,6 +109,8 @@ final class AppSettings: ObservableObject {
     @AppStorage("developerMode") var developerMode = false
     /// The paywall was presented once on first launch.
     @AppStorage("paywallShown") var paywallShown = false
+    /// "system", "en" or "nl". Read by `L10n` and the root view's locale.
+    @AppStorage("appLanguage") var appLanguage = "system"
 
     // Ride state. Persisted because iOS may relaunch the app mid-ride.
     @AppStorage("rideActive") var rideActive = false

@@ -7,7 +7,7 @@ import SwiftUI
 struct DemoLockScreen: View {
     private let state = RideActivityAttributes.ContentState(
         connected: true, locked: false, battery: 54, voltage: 37.65, speed: 21, distance: 3400,
-        reunlocks: 1, lastEvent: "Bike unlocked again", updatedAt: Date())
+        reunlocks: 1, lastEvent: L10n.string("Bike unlocked again"), updatedAt: Date())
 
     /// Matches the 9:41 the screenshot script puts in the status bar.
     private let clock = Calendar.current.date(bySettingHour: 9, minute: 41, second: 0, of: Date()) ?? Date()

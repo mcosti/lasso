@@ -198,6 +198,6 @@ final class Store: ObservableObject {
 
     enum StoreError: LocalizedError {
         case productUnavailable
-        var errorDescription: String? { "The App Store did not return this product. Check your connection and try again." }
+        var errorDescription: String? { L10n.string("The App Store did not return this product. Check your connection and try again.") }
     }
 }

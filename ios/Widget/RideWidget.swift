@@ -35,7 +35,7 @@ struct RideLiveActivity: Widget {
                 Image(systemName: context.state.locked ? "lock.fill" : "lock.open.fill")
                     .foregroundStyle(context.state.connected ? (context.state.locked ? .red : .green) : .gray)
             } compactTrailing: {
-                Text(context.state.battery.map { "\($0)%" } ?? "—").font(.caption2).monospacedDigit()
+                Text(verbatim: context.state.battery.map { "\($0)%" } ?? "—").font(.caption2).monospacedDigit()
             } minimal: {
                 Image(systemName: context.state.locked ? "lock.fill" : "lock.open.fill")
                     .foregroundStyle(context.state.connected ? (context.state.locked ? .red : .green) : .gray)

@@ -107,18 +107,20 @@ struct StatusCard: View {
                 .foregroundStyle(lockColor)
 
                 let d = bike.dashboard
+                let locale = L10n.locale
                 HStack(spacing: 0) {
                     Metric(value: d.battery.map { "\($0)%" }, unit: "battery")
-                    Metric(value: d.batteryVoltage.map { String(format: "%.1f V", Double($0) / 1000) }, unit: "voltage")
-                    Metric(value: d.batteryTempCelsius.map { String(format: "%.0f °C", $0) }, unit: "temp")
+                    Metric(value: d.batteryVoltage.map { String(format: "%.1f V", locale: locale, Double($0) / 1000) }, unit: "voltage")
+                    Metric(value: d.batteryTempCelsius.map { String(format: "%.0f °C", locale: locale, $0) }, unit: "temp")
                 }
                 HStack(spacing: 0) {
                     Metric(value: "\(d.speed) km/h", unit: "speed")
                     Metric(value: "\(d.power) W", unit: "power")
-                    Metric(value: String(format: "%.1f km", Double(d.distance) / 1000), unit: "trip")
+                    Metric(value: String(format: "%.1f km", locale: locale, Double(d.distance) / 1000), unit: "trip")
                 }
                 if let sag = d.minLoadedVoltage {
-                    Text(String(format: "Lowest voltage under load this ride: %.2f V at %d W", Double(sag) / 1000, d.minLoadedVoltagePower))
+                    let volts = String(format: "%.2f", locale: locale, Double(sag) / 1000)
+                    Text(L10n.string("Lowest voltage under load this ride: \(volts) V at \(Int(d.minLoadedVoltagePower)) W"))
                         .font(.caption).foregroundStyle(Theme.secondaryText)
                 }
                 if let updated = d.updatedAt {
@@ -126,7 +128,8 @@ struct StatusCard: View {
                         .font(.caption2).foregroundStyle(Theme.secondaryText)
                 }
                 if settings.dryRun {
-                    Label("Dry run: decisions are logged, nothing is written", systemImage: "eye")
+                    // Developer mode only: stays English, like the log.
+                    Label { Text(verbatim: "Dry run: decisions are logged, nothing is written") } icon: { Image(systemName: "eye") }
                         .font(.caption.weight(.semibold)).foregroundStyle(.yellow)
                 }
                 if bike.demoBike {
@@ -141,16 +144,16 @@ struct StatusCard: View {
 
     private var lockTitle: String {
         switch bike.lockState {
-        case .unlocked: "UNLOCKED"
-        case .locked: "LOCKED"
-        case .unknown: bike.connection == .connected ? "READING…" : "—"
+        case .unlocked: L10n.string("UNLOCKED")
+        case .locked: L10n.string("LOCKED")
+        case .unknown: bike.connection == .connected ? L10n.string("READING…") : "—"
         }
     }
 }
 
 struct Metric: View {
     let value: String?
-    let unit: String
+    let unit: LocalizedStringKey
 
     var body: some View {
         VStack(alignment: .leading, spacing: 2) {
@@ -184,7 +187,7 @@ struct ActionButtons: View {
 }
 
 struct ActionButton: View {
-    let title: String
+    let title: LocalizedStringKey
     let icon: String
     let color: Color
     let action: () -> Void
@@ -238,11 +241,12 @@ struct TrialBanner: View {
 
     static func text(for access: Store.Access) -> String? {
         switch access {
-        case .none: return "Try automatic re-unlock free for 7 days"
-        case .expired: return "Trial ended, automatic unlock is off"
+        case .none: return L10n.string("Try automatic re-unlock free for 7 days")
+        case .expired: return L10n.string("Trial ended, automatic unlock is off")
         case .trial(let endsAt):
             let days = max(1, Int((endsAt.timeIntervalSinceNow / 86400).rounded(.up)))
-            return "Free trial: \(days) \(days == 1 ? "day" : "days") left"
+            // Plural variants live in the String Catalog.
+            return L10n.string("Free trial: \(days) days left")
         default: return nil
         }
     }
@@ -266,7 +270,7 @@ struct TrialBanner: View {
 
 /// Three steps shown before a bike is paired.
 struct HowItWorksCard: View {
-    private let steps = [
+    private let steps: [LocalizedStringKey] = [
         "Pair your phone with the bike in the official Cowboy app once.",
         "Pick your bike below.",
         "Leave Lasso in the background; it re-unlocks the bike after a battery drop.",
@@ -278,7 +282,7 @@ struct HowItWorksCard: View {
                 Text("How it works").font(.headline)
                 ForEach(Array(steps.enumerated()), id: \.offset) { i, step in
                     HStack(alignment: .firstTextBaseline, spacing: 10) {
-                        Text("\(i + 1)").font(.subheadline.weight(.bold)).foregroundStyle(Theme.accent)
+                        Text(verbatim: "\(i + 1)").font(.subheadline.weight(.bold)).foregroundStyle(Theme.accent)
                         Text(step).font(.footnote).foregroundStyle(Theme.secondaryText)
                     }
                 }
@@ -305,8 +309,8 @@ struct PairingCard: View {
                         HStack {
                             Image(systemName: "bicycle")
                             VStack(alignment: .leading) {
-                                Text(peripheral.name ?? "Bike").font(.body.weight(.semibold))
-                                    + Text(peripheral.state == .connected ? "  · linked" : "").font(.caption).foregroundColor(Theme.unlocked)
+                                (peripheral.name.map { Text(verbatim: $0) } ?? Text("Bike")).font(.body.weight(.semibold))
+                                    + (peripheral.state == .connected ? Text("  · linked") : Text(verbatim: "")).font(.caption).foregroundColor(Theme.unlocked)
                                 Text(peripheral.identifier.uuidString).font(.caption2).foregroundStyle(Theme.secondaryText)
                             }
                             Spacer()
@@ -348,6 +352,17 @@ struct LogCard: View {
         case all = "All", connection = "Connection", lock = "Lock", problems = "Problems"
         var id: String { rawValue }
 
+        /// The raw values are English identifiers; this is what is shown.
+        /// "Lock" has its own key because the Lock button already uses "Lock".
+        var title: LocalizedStringKey {
+            switch self {
+            case .all: "All"
+            case .connection: "Connection"
+            case .lock: "filter.lock"
+            case .problems: "Problems"
+            }
+        }
+
         func matches(_ kind: EventLog.Entry.Kind) -> Bool {
             switch self {
             case .all: true
@@ -377,7 +392,7 @@ struct LogCard: View {
                     } label: { Image(systemName: "ellipsis.circle") }
                 }
                 Picker("Filter", selection: $filter) {
-                    ForEach(Filter.allCases) { Text($0.rawValue).tag($0) }
+                    ForEach(Filter.allCases) { Text($0.title).tag($0) }
                 }
                 .pickerStyle(.segmented)
                 if log.entries.isEmpty {
@@ -473,7 +488,7 @@ struct SettingsScreen: View {
                 Section {
                     Toggle("Unlock write with response", isOn: $settings.unlockWithResponse)
                     Stepper(value: $settings.unlockDelay, in: 0...10, step: 0.5) {
-                        LabeledContent("Delay after reconnect", value: String(format: "%.1f s", settings.unlockDelay))
+                        LabeledContent("Delay after reconnect", value: String(format: "%.1f s", locale: L10n.locale, settings.unlockDelay))
                     }
                     Stepper(value: $settings.unlockRetries, in: 1...10) {
                         LabeledContent("Retries", value: "\(settings.unlockRetries)")
@@ -511,17 +526,18 @@ struct SettingsScreen: View {
 
                 if settings.developerMode {
                     Section {
-                        Toggle("Dry run", isOn: $settings.dryRun)
-                        Button("Simulate a battery drop (reboot bike PCB)") { bike.sendUART(ModbusCommand.resetPCB, label: "Reset PCB") }
+                        // Developer mode: not localized, like the log.
+                        Toggle(isOn: $settings.dryRun) { Text(verbatim: "Dry run") }
+                        Button { bike.sendUART(ModbusCommand.resetPCB, label: "Reset PCB") } label: { Text(verbatim: "Simulate a battery drop (reboot bike PCB)") }
                             .disabled(bike.connection != .connected)
-                        Button("Read auto-lock setting") { bike.sendUART(ModbusCommand.readAutoLock, label: "Read auto-lock") }
+                        Button { bike.sendUART(ModbusCommand.readAutoLock, label: "Read auto-lock") } label: { Text(verbatim: "Read auto-lock setting") }
                             .disabled(bike.connection != .connected)
-                        Button("Read auto-unlock setting") { bike.sendUART(ModbusCommand.readAutoUnlock, label: "Read auto-unlock") }
+                        Button { bike.sendUART(ModbusCommand.readAutoUnlock, label: "Read auto-unlock") } label: { Text(verbatim: "Read auto-unlock setting") }
                             .disabled(bike.connection != .connected)
                     } header: {
-                        Text("Testing")
+                        Text(verbatim: "Testing")
                     } footer: {
-                        Text("Dry run logs what the app would do without writing the unlock. The PCB reboot restarts the bike's communication board, which drops the Bluetooth link the same way a battery blip does; settings are kept. Expect the LEDs on the top tube to run back and forth.")
+                        Text(verbatim: "Dry run logs what the app would do without writing the unlock. The PCB reboot restarts the bike's communication board, which drops the Bluetooth link the same way a battery blip does; settings are kept. Expect the LEDs on the top tube to run back and forth.")
                     }
                 }
 
@@ -537,6 +553,12 @@ struct SettingsScreen: View {
                 }
 
                 Section {
+                    Picker("Language", selection: $settings.appLanguage) {
+                        Text("System").tag("system")
+                        // Each language in its own name, never translated.
+                        Text(verbatim: "English").tag("en")
+                        Text(verbatim: "Nederlands").tag("nl")
+                    }
                     LabeledContent("Version", value: AppInfo.version)
                         .contentShape(Rectangle())
                         .onTapGesture(perform: versionTapped)
@@ -563,10 +585,11 @@ struct SettingsScreen: View {
 
     private var purchaseStatus: String {
         switch store.access {
-        case .lifetime: "Lifetime"
-        case .trial(let endsAt): "Trial until \(endsAt.formatted(date: .abbreviated, time: .omitted))"
-        case .expired: "Trial ended"
-        case .none: "Free trial"
+        case .lifetime: L10n.string("Lifetime")
+        case .trial(let endsAt):
+            L10n.string("Trial until \(endsAt.formatted(Date.FormatStyle(date: .abbreviated, time: .omitted, locale: L10n.locale)))")
+        case .expired: L10n.string("Trial ended")
+        case .none: L10n.string("Free trial")
         case .open, .unknown: "…"
         }
     }
@@ -577,7 +600,7 @@ struct SettingsScreen: View {
         c.path = AppInfo.supportEmail
         c.queryItems = [
             URLQueryItem(name: "subject", value: "\(AppInfo.name) \(AppInfo.version)"),
-            URLQueryItem(name: "body", value: "Please attach the log from the Log card's share button."),
+            URLQueryItem(name: "body", value: L10n.string("Please attach the log from the Log card's share button.")),
         ]
         return c.url
     }

@@ -41,10 +41,11 @@ struct PaywallView: View {
 
     private var title: String {
         switch store.access {
-        case .trial(let endsAt): "Trial ends \(endsAt.formatted(.relative(presentation: .named)))"
-        case .expired: "Your trial has ended"
-        case .lifetime: "You own Lasso. Thank you."
-        default: "Try Lasso free for 7 days"
+        case .trial(let endsAt):
+            L10n.string("Trial ends \(endsAt.formatted(Date.RelativeFormatStyle(presentation: .named, locale: L10n.locale)))")
+        case .expired: L10n.string("Your trial has ended")
+        case .lifetime: L10n.string("You own Lasso. Thank you.")
+        default: L10n.string("Try Lasso free for 7 days")
         }
     }
 
@@ -86,14 +87,14 @@ struct PaywallView: View {
         .background(Theme.card, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
     }
 
-    private func bullet(_ icon: String, _ text: String) -> some View {
+    private func bullet(_ icon: String, _ text: LocalizedStringKey) -> some View {
         HStack(alignment: .top, spacing: 12) {
             Image(systemName: icon).foregroundStyle(Theme.accent).frame(width: 22)
             Text(text).font(.subheadline)
         }
     }
 
-    private func primary(_ title: String, _ action: @escaping () async throws -> Void) -> some View {
+    private func primary(_ title: LocalizedStringKey, _ action: @escaping () async throws -> Void) -> some View {
         Button { run(action) } label: {
             Text(title).font(.headline).frame(maxWidth: .infinity, minHeight: 50)
         }
@@ -101,7 +102,7 @@ struct PaywallView: View {
         .disabled(busy)
     }
 
-    private func secondary(_ title: String, _ action: @escaping () async throws -> Void) -> some View {
+    private func secondary(_ title: LocalizedStringKey, _ action: @escaping () async throws -> Void) -> some View {
         Button { run(action) } label: {
             Text(title).font(.headline).frame(maxWidth: .infinity, minHeight: 50)
         }

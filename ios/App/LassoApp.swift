@@ -7,13 +7,37 @@ struct LassoApp: App {
 
     var body: some Scene {
         WindowGroup {
-            if Demo.isActive && Demo.screen == "lockscreen" {
-                DemoLockScreen()
-            } else {
-                ContentView()
-                    .preferredColorScheme(.dark)
-            }
+            RootView()
         }
+    }
+}
+
+/// Applies the in-app language. SwiftUI `Text` literals look themselves up in
+/// the String Catalog using the `\.locale` environment; strings built in code
+/// go through `L10n`, which reads the same setting. Observing the settings
+/// re-renders everything as soon as the picker changes, no restart needed.
+struct RootView: View {
+    @ObservedObject private var settings = AppSettings.shared
+
+    var body: some View {
+        content
+            .environment(\.locale, locale)
+    }
+
+    @ViewBuilder private var content: some View {
+        if Demo.isActive && Demo.screen == "lockscreen" {
+            DemoLockScreen()
+        } else {
+            ContentView()
+                .preferredColorScheme(.dark)
+        }
+    }
+
+    /// `L10n.locale` is the system locale for "system", so the environment
+    /// is then left as SwiftUI would set it.
+    private var locale: Locale {
+        _ = settings.appLanguage // re-evaluate when the picker changes
+        return L10n.locale
     }
 }
 

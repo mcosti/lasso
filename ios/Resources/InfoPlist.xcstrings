@@ -1,0 +1,24 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "NSBluetoothAlwaysUsageDescription" : {
+      "comment" : "Bluetooth permission prompt",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lasso talks to your Cowboy bike over Bluetooth to notice when it locks itself and unlock it again."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lasso praat via Bluetooth met je Cowboy-fiets om te merken wanneer hij zichzelf vergrendelt en hem weer te ontgrendelen."
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
