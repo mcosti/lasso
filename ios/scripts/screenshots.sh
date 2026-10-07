@@ -4,15 +4,12 @@
 #   ios/scripts/screenshots.sh            # iPhone 17 Pro Max (6.9") only
 #   ios/scripts/screenshots.sh "iPhone 17 Pro Max" "iPhone 16 Plus"
 #
-# Raw captures land in <private repo>/marketing/screenshots/captured/<device>/,
-# then that repo's tools/frame_screenshots.py frames them for the store.
+# Raw captures land in build/screenshots/<device>/ (override with
+# SCREENSHOTS_DIR). Set FRAME_SCRIPT to a script that should run afterwards
+# to frame/caption them.
 set -eu
 cd "$(dirname "$0")/.."
-ROOT=$(cd .. && pwd)
-# Screenshots are marketing material and live in the nested private repo.
-PRIVATE="${LASSO_PRIVATE:-$ROOT/private}"
-OUT="$PRIVATE/marketing/screenshots/captured"
-DEVICES="${*:-iPhone 17 Pro Max}"
+OUT="${SCREENSHOTS_DIR:-$PWD/build/screenshots}"
 
 xcodegen generate >/dev/null
 
@@ -57,8 +54,7 @@ PY
   xcrun simctl status_bar "$UDID" clear
 done
 
-if [ -f "$PRIVATE/tools/frame_screenshots.py" ]; then
-  python3 "$PRIVATE/tools/frame_screenshots.py"
-else
-  echo "captures in $OUT (no framing script found)"
+echo "captures in $OUT"
+if [ -n "${FRAME_SCRIPT:-}" ]; then
+  "$FRAME_SCRIPT" "$OUT"
 fi
