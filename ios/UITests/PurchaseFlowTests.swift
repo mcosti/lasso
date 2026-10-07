@@ -22,31 +22,46 @@ final class PurchaseFlowTests: XCTestCase {
         success.tap()
     }
 
-    func testTrialThenLifetime() {
+    func testOnboardingTrialThenLifetime() {
         let app = XCUIApplication()
-        app.launchArguments = ["-paywallShown", "NO"]
+        app.launchArguments = ["-paywallShown", "NO", "-onboardingDone", "NO"]
         app.launch()
-        let allow = XCUIApplication(bundleIdentifier: "com.apple.springboard").alerts.buttons["Allow"]
-        if allow.waitForExistence(timeout: 6) { allow.tap() }
 
-        // 1. First launch: the paywall explains the trial.
+        // 1. Onboarding: three pages, notifications opt-in at the end.
+        let next = app.buttons["onboardingContinue"]
+        XCTAssertTrue(app.staticTexts["Your bike, unlocked again"].waitForExistence(timeout: 20))
+        sleep(3)
+        next.tap()
+        XCTAssertTrue(app.staticTexts["How it works"].waitForExistence(timeout: 5))
+        sleep(3)
+        next.tap()
+        XCTAssertTrue(app.buttons["Enable notifications"].waitForExistence(timeout: 5))
+        sleep(2)
+        app.buttons["Enable notifications"].tap()
+        let allow = XCUIApplication(bundleIdentifier: "com.apple.springboard").alerts.buttons["Allow"]
+        if allow.waitForExistence(timeout: 6) { sleep(1); allow.tap() }
+
+        // 2. Home screen, no paywall yet: it waits for the first paired bike.
+        XCTAssertTrue(app.staticTexts["Pair your bike"].waitForExistence(timeout: 10))
+        XCTAssertFalse(app.staticTexts["Try Lasso free for 7 days"].exists)
+        sleep(3)
+
+        // 3. Settings > Purchase opens the paywall; start the trial.
+        app.buttons["settings"].tap()
+        var row = app.buttons.matching(NSPredicate(format: "label CONTAINS[c] 'free trial'")).firstMatch
+        XCTAssertTrue(row.waitForExistence(timeout: 15))
+        sleep(2)
+        row.tap()
         XCTAssertTrue(app.staticTexts["Try Lasso free for 7 days"].waitForExistence(timeout: 20))
         XCTAssertTrue(app.buttons.matching(NSPredicate(format: "label BEGINSWITH 'Buy Lifetime'")).firstMatch.waitForExistence(timeout: 20))
         sleep(4)
         app.buttons["Start free trial"].tap()
         chooseSuccessfulPurchase(in: app)
 
-        // 2. Trial running: the paywall closes and the log records it. (The
-        // "days left" banner only appears once a bike is paired.)
-        let logged = app.staticTexts.matching(NSPredicate(format: "label CONTAINS 'Free trial started'")).firstMatch
-        XCTAssertTrue(logged.waitForExistence(timeout: 25))
-        sleep(4)
-
-        // 3. Settings shows the purchase state; tapping it opens the paywall.
-        app.buttons["settings"].tap()
-        let row = app.buttons.matching(NSPredicate(format: "label CONTAINS[c] 'trial'")).firstMatch
-        XCTAssertTrue(row.waitForExistence(timeout: 10))
-        sleep(2)
+        // 4. Trial running: the paywall closes and the row shows the end date.
+        row = app.buttons.matching(NSPredicate(format: "label CONTAINS[c] 'trial until'")).firstMatch
+        XCTAssertTrue(row.waitForExistence(timeout: 25))
+        sleep(3)
         row.tap()
         let buy = app.buttons.matching(NSPredicate(format: "label BEGINSWITH 'Buy Lifetime'")).firstMatch
         XCTAssertTrue(buy.waitForExistence(timeout: 15))
@@ -54,8 +69,8 @@ final class PurchaseFlowTests: XCTestCase {
         buy.tap()
         chooseSuccessfulPurchase(in: app)
 
-        // 4. Lifetime owned.
+        // 5. Lifetime owned.
         XCTAssertTrue(app.staticTexts["You own Lasso. Thank you."].waitForExistence(timeout: 25))
-        sleep(4)
+        sleep(5)
     }
 }

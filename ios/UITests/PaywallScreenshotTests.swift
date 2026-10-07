@@ -12,14 +12,15 @@ final class PaywallScreenshotTests: XCTestCase {
         }
     }
 
-    func testFirstLaunchPaywall() {
+    func testPaywallFromSettings() {
         let app = XCUIApplication()
-        // No -demo: the real Store runs. -paywallShown NO resets the once-only flag.
-        app.launchArguments = ["-paywallShown", "NO"]
+        // No -demo: the real Store runs. The paywall opens from the Purchase row in Settings.
+        app.launchArguments = ["-paywallShown", "NO", "-onboardingDone", "YES"]
         app.launch()
-        let springboard = XCUIApplication(bundleIdentifier: "com.apple.springboard")
-        let allow = springboard.alerts.buttons["Allow"]
-        if allow.waitForExistence(timeout: 6) { allow.tap() }
+        app.buttons["settings"].tap()
+        let row = app.buttons.matching(NSPredicate(format: "label CONTAINS[c] 'trial'")).firstMatch
+        XCTAssertTrue(row.waitForExistence(timeout: 20))
+        row.tap()
         XCTAssertTrue(app.staticTexts["Try Lasso free for 7 days"].waitForExistence(timeout: 20))
         XCTAssertTrue(app.buttons["Restore Purchases"].waitForExistence(timeout: 20))
         sleep(2) // let the price load

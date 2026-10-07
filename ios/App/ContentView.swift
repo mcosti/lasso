@@ -54,12 +54,18 @@ struct ContentView: View {
                 Task { await store.refresh() }
             }
         }
-        .onChange(of: store.access, initial: true) { _, access in
-            // Show the trial terms once, before any automatic unlock can happen.
-            guard store.isConfigured, access == .none, !settings.paywallShown else { return }
-            settings.paywallShown = true
-            showPaywall = true
-        }
+        .onChange(of: store.access, initial: true) { _, _ in maybeShowPaywall() }
+        .onChange(of: bike.hasBike) { _, _ in maybeShowPaywall() }
+    }
+
+    /// The trial terms are shown once, when the first real bike is paired:
+    /// that is the moment automatic unlocks become possible. Until then the
+    /// app explains itself without asking for anything.
+    private func maybeShowPaywall() {
+        guard store.isConfigured, store.access == .none, !settings.paywallShown,
+              bike.hasBike, !bike.demoBike else { return }
+        settings.paywallShown = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) { showPaywall = true }
     }
 }
 
@@ -435,6 +441,7 @@ struct SettingsScreen: View {
     @State private var confirmForget = false
     @State private var showPaywall = false
     @State private var versionTaps = 0
+    @State private var notificationsDenied = false
 
     var body: some View {
         NavigationStack {
@@ -515,6 +522,12 @@ struct SettingsScreen: View {
                 Section {
                     Toggle("When the bike is re-unlocked", isOn: $settings.notifyOnReunlock)
                     Toggle("Every lock and unlock", isOn: $settings.notifyOnLockChange)
+                    if notificationsDenied {
+                        Button("Notifications are off for Lasso in iOS Settings. Open Settings") {
+                            if let url = URL(string: UIApplication.openSettingsURLString) { openURL(url) }
+                        }
+                        .font(.footnote)
+                    }
                     Toggle("Live Activity during rides", isOn: Binding(
                         get: { settings.liveActivity },
                         set: { bike.setLiveActivity($0) }))
@@ -523,6 +536,9 @@ struct SettingsScreen: View {
                 } footer: {
                     Text("The Live Activity shows lock state, battery and the last event on the Lock Screen and in the Dynamic Island while a ride is active. It is updated on bike events only.")
                 }
+                .onChange(of: settings.notifyOnReunlock) { _, on in if on { askNotificationPermission() } }
+                .onChange(of: settings.notifyOnLockChange) { _, on in if on { askNotificationPermission() } }
+                .task { notificationsDenied = await Notifications.isDenied() }
 
                 if settings.developerMode {
                     Section {
@@ -581,6 +597,14 @@ struct SettingsScreen: View {
             .sheet(isPresented: $showPaywall) { PaywallView(store: store) }
         }
         .preferredColorScheme(.dark)
+    }
+
+    /// Turning a notification toggle on asks iOS once; a refusal shows the hint.
+    private func askNotificationPermission() {
+        Task {
+            _ = await Notifications.request()
+            notificationsDenied = await Notifications.isDenied()
+        }
     }
 
     private var purchaseStatus: String {

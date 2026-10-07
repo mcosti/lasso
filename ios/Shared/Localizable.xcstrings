@@ -1,479 +1,499 @@
 {
-  "sourceLanguage" : "en",
-  "strings" : {
-    "  · linked" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "  · gekoppeld"
+  "sourceLanguage": "en",
+  "strings": {
+    "  · linked": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "  · gekoppeld"
           }
         }
       }
     },
-    "%@ km" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ km"
+    "%@ km": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ km"
           }
         }
       }
     },
-    "%@ re-unlocked your bike." : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ heeft je fiets weer ontgrendeld."
+    "%@ re-unlocked your bike.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ heeft je fiets weer ontgrendeld."
           }
         }
       }
     },
-    "%lld" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld"
+    "%lld": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld"
           }
         }
       }
     },
-    "%lld km/h" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld km/h"
+    "%lld km/h": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld km/h"
           }
         }
       }
     },
-    "%lld×" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld×"
+    "%lld×": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld×"
           }
         }
       }
     },
-    "0.5 s delay, 6 retries every 1.5 s, polls the lock every 5 s and undoes any lock during a ride. Lock from this app." : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "0,5 s vertraging, 6 pogingen elke 1,5 s, leest het slot elke 5 s uit en draait elke vergrendeling tijdens een rit terug. Vergrendel vanuit deze app."
+    "0.5 s delay, 6 retries every 1.5 s, polls the lock every 5 s and undoes any lock during a ride. Lock from this app.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "0,5 s vertraging, 6 pogingen elke 1,5 s, leest het slot elke 5 s uit en draait elke vergrendeling tijdens een rit terug. Vergrendel vanuit deze app."
           }
         }
       }
     },
-    "A detailed log of every connection, lock and unlock" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Een gedetailleerd logboek van elke verbinding, vergrendeling en ontgrendeling"
+    "A detailed log of every connection, lock and unlock": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Een gedetailleerd logboek van elke verbinding, vergrendeling en ontgrendeling"
           }
         }
       }
     },
-    "A reconnect within the window counts as the same ride and gets re-unlocked. A lock within the grace period after the bike last moved is treated as a glitch." : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Een herverbinding binnen het venster telt als dezelfde rit en wordt weer ontgrendeld. Een vergrendeling binnen de marge nadat de fiets voor het laatst bewoog, wordt als storing behandeld."
+    "A reconnect within the window counts as the same ride and gets re-unlocked. A lock within the grace period after the bike last moved is treated as a glitch.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Een herverbinding binnen het venster telt als dezelfde rit en wordt weer ontgrendeld. Een vergrendeling binnen de marge nadat de fiets voor het laatst bewoog, wordt als storing behandeld."
           }
         }
       }
     },
-    "About" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Over"
+    "About": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Over"
           }
         }
       }
     },
-    "After the trial, automatic re-unlock stops; the manual buttons and the log keep working. Keep it forever for %@ (one-time purchase, no subscription)." : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Na de proefperiode stopt het automatisch ontgrendelen; de knoppen en het logboek blijven werken. Houd het voor altijd voor %@ (eenmalige aankoop, geen abonnement)."
+    "After the trial, automatic re-unlock stops; the manual buttons and the log keep working. Keep it forever for %@ (one-time purchase, no subscription).": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Na de proefperiode stopt het automatisch ontgrendelen; de knoppen en het logboek blijven werken. Houd het voor altijd voor %@ (eenmalige aankoop, geen abonnement)."
           }
         }
       }
     },
-    "All" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alles"
+    "All": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alles"
           }
         }
       }
     },
-    "Alternatives to try if the default does not re-unlock. Write type: Bronco writes with response, the nRF key fob without. Polling catches a bike that never notifies its lock state. \"Undo any lock\" also reverts locks at standstill, so lock the bike from this app instead of the official one while it is on. The live dashboard is what detects movement; turning it off saves a few background wake-ups per second while riding." : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alternatieven om te proberen als de standaard de fiets niet weer ontgrendelt. Schrijftype: Bronco schrijft met antwoord, de nRF-sleutelhanger zonder. Periodiek uitlezen helpt bij een fiets die zijn slotstatus nooit doorgeeft. \"Elke vergrendeling terugdraaien\" draait ook vergrendelingen bij stilstand terug, dus vergrendel de fiets vanuit deze app in plaats van de officiële app zolang dit aan staat. Het live dashboard is wat beweging detecteert; uitzetten scheelt tijdens het rijden een paar keer per seconde wakker worden op de achtergrond."
+    "Alternatives to try if the default does not re-unlock. Write type: Bronco writes with response, the nRF key fob without. Polling catches a bike that never notifies its lock state. \"Undo any lock\" also reverts locks at standstill, so lock the bike from this app instead of the official one while it is on. The live dashboard is what detects movement; turning it off saves a few background wake-ups per second while riding.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alternatieven om te proberen als de standaard de fiets niet weer ontgrendelt. Schrijftype: Bronco schrijft met antwoord, de nRF-sleutelhanger zonder. Periodiek uitlezen helpt bij een fiets die zijn slotstatus nooit doorgeeft. \"Elke vergrendeling terugdraaien\" draait ook vergrendelingen bij stilstand terug, dus vergrendel de fiets vanuit deze app in plaats van de officiële app zolang dit aan staat. Het live dashboard is wat beweging detecteert; uitzetten scheelt tijdens het rijden een paar keer per seconde wakker worden op de achtergrond."
           }
         }
       }
     },
-    "Always" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Altijd"
+    "Always": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Altijd"
           }
         }
       }
     },
-    "Auto unlock" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Automatisch ontgrendelen"
+    "Auto unlock": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Automatisch ontgrendelen"
           }
         }
       }
     },
-    "Automatic re-unlock when the bike locks itself after a battery drop mid-ride" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Automatisch weer ontgrendelen als de fiets zichzelf vergrendelt na een accustoring tijdens de rit"
+    "Automatic re-unlock when the bike locks itself after a battery drop mid-ride": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Automatisch weer ontgrendelen als de fiets zichzelf vergrendelt na een accustoring tijdens de rit"
           }
         }
       }
     },
-    "Automatic re-unlock, the Live Activity and the log are yours to keep." : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Automatisch weer ontgrendelen, de Live Activity en het logboek zijn voorgoed van jou."
+    "Automatic re-unlock, the Live Activity and the log are yours to keep.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Automatisch weer ontgrendelen, de Live Activity en het logboek zijn voorgoed van jou."
           }
         }
       }
     },
-    "Bike" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fiets"
+    "Bike": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fiets"
           }
         }
       }
     },
-    "Bike locked" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fiets vergrendeld"
+    "Bike locked": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fiets vergrendeld"
           }
         }
       }
     },
-    "Bike unlocked" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fiets ontgrendeld"
+    "Bike unlocked": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fiets ontgrendeld"
           }
         }
       }
     },
-    "Bike unlocked again" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fiets weer ontgrendeld"
+    "Bike unlocked again": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fiets weer ontgrendeld"
           }
         }
       }
     },
-    "Bluetooth access denied" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Geen toegang tot Bluetooth"
+    "Bluetooth access denied": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geen toegang tot Bluetooth"
           }
         }
       }
     },
-    "Bluetooth is off" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bluetooth staat uit"
+    "Bluetooth is off": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bluetooth staat uit"
           }
         }
       }
     },
-    "Buy Lifetime %@" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Koop Lifetime %@"
+    "Buy Lifetime %@": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Koop Lifetime %@"
           }
         }
       }
     },
-    "Clear log" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wis logboek"
+    "Clear log": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wis logboek"
           }
         }
       }
     },
-    "Close" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sluit"
+    "Close": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sluit"
           }
         }
       }
     },
-    "Connected" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verbonden"
+    "Connected": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verbonden"
           }
         }
       }
     },
-    "Connecting…" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verbinden…"
+    "Connecting…": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verbinden…"
           }
         }
       }
     },
-    "Connection" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verbinding"
+    "Connection": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verbinding"
           }
         }
       }
     },
-    "Contact support" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Neem contact op met support"
+    "Contact support": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Neem contact op met support"
           }
         }
       }
     },
-    "Dashboard updated %@ ago" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dashboard %@ geleden bijgewerkt"
+    "Continue": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Doorgaan"
           }
         }
       }
     },
-    "Delay after reconnect" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vertraging na herverbinden"
+    "Dashboard updated %@ ago": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dashboard %@ geleden bijgewerkt"
           }
         }
       }
     },
-    "Demo bike: nothing here is real. Leave it from Settings." : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Demofiets: niets hiervan is echt. Verlaat hem via Instellingen."
+    "Delay after reconnect": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vertraging na herverbinden"
           }
         }
       }
     },
-    "Done" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gereed"
+    "Demo bike: nothing here is real. Leave it from Settings.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demofiets: niets hiervan is echt. Verlaat hem via Instellingen."
           }
         }
       }
     },
-    "During a ride" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tijdens een rit"
+    "Done": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gereed"
           }
         }
       }
     },
-    "Every 15 s" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Elke 15 s"
+    "During a ride": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tijdens een rit"
           }
         }
       }
     },
-    "Every 30 s" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Elke 30 s"
+    "Enable notifications": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meldingen inschakelen"
           }
         }
       }
     },
-    "Every 5 s" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Elke 5 s"
+    "Every 15 s": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elke 15 s"
           }
         }
       }
     },
-    "Every lock and unlock" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Elke vergrendeling en ontgrendeling"
+    "Every 30 s": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elke 30 s"
           }
         }
       }
     },
-    "Filter" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Filter"
+    "Every 5 s": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elke 5 s"
           }
         }
       }
     },
-    "Forget" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vergeet"
+    "Every lock and unlock": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elke vergrendeling en ontgrendeling"
           }
         }
       }
     },
-    "Forget bike" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vergeet fiets"
+    "Filter": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Filter"
           }
         }
       }
     },
-    "Forget this bike?" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Deze fiets vergeten?"
+    "Forget": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vergeet"
           }
         }
       }
     },
-    "Free trial" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gratis proefperiode"
+    "Forget bike": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vergeet fiets"
           }
         }
       }
     },
-    "Free trial: %lld days left" : {
-      "localizations" : {
-        "en" : {
-          "variations" : {
-            "plural" : {
-              "one" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Free trial: %lld day left"
+    "Forget this bike?": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deze fiets vergeten?"
+          }
+        }
+      }
+    },
+    "Free trial": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gratis proefperiode"
+          }
+        }
+      }
+    },
+    "Free trial: %lld days left": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Free trial: %lld day left"
                 }
               },
-              "other" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Free trial: %lld days left"
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Free trial: %lld days left"
                 }
               }
             }
           }
         },
-        "nl" : {
-          "variations" : {
-            "plural" : {
-              "one" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Gratis proefperiode: nog %lld dag"
+        "nl": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Gratis proefperiode: nog %lld dag"
                 }
               },
-              "other" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Gratis proefperiode: nog %lld dagen"
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Gratis proefperiode: nog %lld dagen"
                 }
               }
             }
@@ -481,890 +501,980 @@
         }
       }
     },
-    "Gives a rebooting bike 3 s, then 5 retries every 3 s." : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Geeft een herstartende fiets 3 s, daarna 5 pogingen elke 3 s."
+    "Gives a rebooting bike 3 s, then 5 retries every 3 s.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geeft een herstartende fiets 3 s, daarna 5 pogingen elke 3 s."
           }
         }
       }
     },
-    "How it works" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zo werkt het"
+    "How it works": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zo werkt het"
           }
         }
       }
     },
-    "Identifier" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ID"
+    "Identifier": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ID"
           }
         }
       }
     },
-    "LOCKED" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "VERGRENDELD"
+    "Know when it happens": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weet wanneer het gebeurt"
           }
         }
       }
     },
-    "Language" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Taal"
+    "LOCKED": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "VERGRENDELD"
           }
         }
       }
     },
-    "Lasso" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lasso"
+    "Language": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Taal"
           }
         }
       }
     },
-    "Lasso is an independent app and is not affiliated with or endorsed by Cowboy SA. Cowboy is a trademark of its owner." : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lasso is een onafhankelijke app en is niet verbonden met of goedgekeurd door Cowboy SA. Cowboy is een handelsmerk van de eigenaar."
+    "Lasso": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lasso"
           }
         }
       }
     },
-    "Lasso no longer unlocks the bike by itself after a battery drop. The Unlock, Lock and Lights buttons and the log keep working. Buy Lifetime once to turn automatic re-unlock back on; there is no subscription." : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lasso ontgrendelt de fiets na een accustoring niet meer vanzelf. De knoppen Ontgrendel, Vergrendel en Verlichting en het logboek blijven werken. Koop Lifetime één keer om automatisch ontgrendelen weer aan te zetten; er is geen abonnement."
+    "Lasso can send a notification each time it re-unlocks your bike. This is optional, and you can change it later in Settings.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lasso kan een melding sturen telkens als het je fiets opnieuw ontgrendelt. Dit is optioneel en je kunt het later wijzigen in Instellingen."
           }
         }
       }
     },
-    "Leave Lasso in the background; it re-unlocks the bike after a battery drop." : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Laat Lasso op de achtergrond staan; de app ontgrendelt de fiets weer na een accustoring."
+    "Lasso is an independent app and is not affiliated with or endorsed by Cowboy SA. Cowboy is a trademark of its owner.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lasso is een onafhankelijke app en is niet verbonden met of goedgekeurd door Cowboy SA. Cowboy is een handelsmerk van de eigenaar."
           }
         }
       }
     },
-    "Leave demo bike" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verlaat demofiets"
+    "Lasso no longer unlocks the bike by itself after a battery drop. The Unlock, Lock and Lights buttons and the log keep working. Buy Lifetime once to turn automatic re-unlock back on; there is no subscription.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lasso ontgrendelt de fiets na een accustoring niet meer vanzelf. De knoppen Ontgrendel, Vergrendel en Verlichting en het logboek blijven werken. Koop Lifetime één keer om automatisch ontgrendelen weer aan te zetten; er is geen abonnement."
           }
         }
       }
     },
-    "Leave the app in the background; iOS does not relaunch a force-quit app for Bluetooth events." : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Laat de app op de achtergrond staan; iOS start een geforceerd gestopte app niet opnieuw voor Bluetooth-gebeurtenissen."
+    "Lasso talks to the bike over Bluetooth and keeps the connection while you ride. It never changes motor settings.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lasso praat via Bluetooth met de fiets en houdt de verbinding vast tijdens het rijden. Het verandert nooit motorinstellingen."
           }
         }
       }
     },
-    "Lifetime" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lifetime"
+    "Leave Lasso in the background; it re-unlocks the bike after a battery drop.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Laat Lasso op de achtergrond staan; de app ontgrendelt de fiets weer na een accustoring."
           }
         }
       }
     },
-    "Lights off" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verlichting uit"
+    "Leave demo bike": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verlaat demofiets"
           }
         }
       }
     },
-    "Lights on" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verlichting aan"
+    "Leave the app in the background; iOS does not relaunch a force-quit app for Bluetooth events.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Laat de app op de achtergrond staan; iOS start een geforceerd gestopte app niet opnieuw voor Bluetooth-gebeurtenissen."
           }
         }
       }
     },
-    "Live Activity during rides" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Live Activity tijdens ritten"
+    "Lifetime": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lifetime"
           }
         }
       }
     },
-    "Live Activity on the Lock Screen and in the Dynamic Island" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Live Activity op het toegangsscherm en in het Dynamic Island"
+    "Lights off": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verlichting uit"
           }
         }
       }
     },
-    "Live dashboard" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Live dashboard"
+    "Lights on": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verlichting aan"
           }
         }
       }
     },
-    "Lock" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vergrendel"
+    "Live Activity during rides": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Live Activity tijdens ritten"
           }
         }
       }
     },
-    "Locked" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vergrendeld"
+    "Live Activity on the Lock Screen and in the Dynamic Island": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Live Activity op het toegangsscherm en in het Dynamic Island"
           }
         }
       }
     },
-    "Log" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Logboek"
+    "Live dashboard": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Live dashboard"
           }
         }
       }
     },
-    "Looking for bikes…" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fietsen zoeken…"
+    "Lock": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vergrendel"
           }
         }
       }
     },
-    "Lowest voltage under load this ride: %@ V at %lld W" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Lowest voltage under load this ride: %1$@ V at %2$lld W"
+    "Locked": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vergrendeld"
+          }
+        }
+      }
+    },
+    "Log": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Logboek"
+          }
+        }
+      }
+    },
+    "Looking for bikes…": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fietsen zoeken…"
+          }
+        }
+      }
+    },
+    "Lowest voltage under load this ride: %@ V at %lld W": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Lowest voltage under load this ride: %1$@ V at %2$lld W"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Laagste spanning onder belasting deze rit: %@ V bij %lld W"
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Laagste spanning onder belasting deze rit: %@ V bij %lld W"
           }
         }
       }
     },
-    "Make sure the bike is awake and nearby. Your iPhone already knows the bike from the official app, so no code should be needed." : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zorg dat de fiets wakker is en in de buurt staat. Je iPhone kent de fiets al van de officiële app, dus een code zou niet nodig moeten zijn."
+    "Made for bikes with a faulty battery. Tested on a Cowboy 3 only.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gemaakt voor fietsen met een defecte accu. Alleen getest op een Cowboy 3."
           }
         }
       }
     },
-    "Mechanism" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mechanisme"
+    "Make sure the bike is awake and nearby. Your iPhone already knows the bike from the official app, so no code should be needed.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zorg dat de fiets wakker is en in de buurt staat. Je iPhone kent de fiets al van de officiële app, dus een code zou niet nodig moeten zijn."
           }
         }
       }
     },
-    "Moving grace" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bewegingsmarge"
+    "Mechanism": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mechanisme"
           }
         }
       }
     },
-    "No bike paired" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Geen fiets gekoppeld"
+    "Moving grace": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bewegingsmarge"
           }
         }
       }
     },
-    "Nothing yet." : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nog niets."
+    "No bike paired": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geen fiets gekoppeld"
           }
         }
       }
     },
-    "Notifications" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Meldingen"
+    "Not now": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nu niet"
           }
         }
       }
     },
-    "Off" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Uit"
+    "Nothing yet.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nog niets."
           }
         }
       }
     },
-    "One tap sets all the mechanism values below. Try the next one if the bike does not come back unlocked." : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Eén tik stelt alle mechanismewaarden hieronder in. Probeer de volgende als de fiets niet ontgrendeld terugkomt."
+    "Notifications": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meldingen"
           }
         }
       }
     },
-    "Only watches the bike and keeps the log. Use the buttons to lock and unlock by hand." : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Houdt de fiets alleen in de gaten en houdt het logboek bij. Gebruik de knoppen om met de hand te vergrendelen en ontgrendelen."
+    "Notifications are off for Lasso in iOS Settings. Open Settings": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meldingen staan uit voor Lasso in iOS-instellingen. Open Instellingen"
           }
         }
       }
     },
-    "Out of range" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Buiten bereik"
+    "Off": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uit"
           }
         }
       }
     },
-    "Pair your bike" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Koppel je fiets"
+    "One tap sets all the mechanism values below. Try the next one if the bike does not come back unlocked.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eén tik stelt alle mechanismewaarden hieronder in. Probeer de volgende als de fiets niet ontgrendeld terugkomt."
           }
         }
       }
     },
-    "Pair your phone with the bike in the official Cowboy app once." : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Koppel je telefoon één keer met de fiets in de officiële Cowboy-app."
+    "Only watches the bike and keeps the log. Use the buttons to lock and unlock by hand.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Houdt de fiets alleen in de gaten en houdt het logboek bij. Gebruik de knoppen om met de hand te vergrendelen en ontgrendelen."
           }
         }
       }
     },
-    "Pick your bike below." : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kies hieronder je fiets."
+    "Out of range": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buiten bereik"
           }
         }
       }
     },
-    "Please attach the log from the Log card's share button." : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Voeg het logboek toe via de deelknop op de Logboek-kaart."
+    "Pair your bike": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Koppel je fiets"
           }
         }
       }
     },
-    "Poll lock state during a ride" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Slotstatus uitlezen tijdens een rit"
+    "Pair your phone with the bike in the official Cowboy app once.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Koppel je telefoon één keer met de fiets in de officiële Cowboy-app."
           }
         }
       }
     },
-    "Presets" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Voorinstellingen"
+    "Pick your bike below.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kies hieronder je fiets."
           }
         }
       }
     },
-    "Problems" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Problemen"
+    "Pick your bike from the list on the home screen.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kies je fiets uit de lijst op het beginscherm."
           }
         }
       }
     },
-    "Purchase" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aankoop"
+    "Please attach the log from the Log card's share button.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voeg het logboek toe via de deelknop op de Logboek-kaart."
           }
         }
       }
     },
-    "READING…" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "UITLEZEN…"
+    "Poll lock state during a ride": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Slotstatus uitlezen tijdens een rit"
           }
         }
       }
     },
-    "Re-unlocks the bike when it locks itself while you are riding, for example after a battery hiccup. Locking it on purpose, or the bike's own auto-lock when parked, is left alone." : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ontgrendelt de fiets weer als hij zichzelf vergrendelt terwijl je rijdt, bijvoorbeeld na een accustoring. Bewust vergrendelen, of de automatische vergrendeling van de fiets zelf als hij geparkeerd staat, blijft ongemoeid."
+    "Presets": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voorinstellingen"
           }
         }
       }
     },
-    "Reconnect window" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Herverbindingsvenster"
+    "Problems": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Problemen"
           }
         }
       }
     },
-    "Restore Purchases" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Herstel aankopen"
+    "Purchase": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aankoop"
           }
         }
       }
     },
-    "Retries" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pogingen"
+    "READING…": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "UITLEZEN…"
           }
         }
       }
     },
-    "Retry interval" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Interval tussen pogingen"
+    "Re-unlocks the bike when it locks itself while you are riding, for example after a battery hiccup. Locking it on purpose, or the bike's own auto-lock when parked, is left alone.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ontgrendelt de fiets weer als hij zichzelf vergrendelt terwijl je rijdt, bijvoorbeeld na een accustoring. Bewust vergrendelen, of de automatische vergrendeling van de fiets zelf als hij geparkeerd staat, blijft ongemoeid."
           }
         }
       }
     },
-    "Ride active" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rit actief"
+    "Reconnect window": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Herverbindingsvenster"
           }
         }
       }
     },
-    "Scan" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Scan"
+    "Restore Purchases": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Herstel aankopen"
           }
         }
       }
     },
-    "Settings" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Instellingen"
+    "Retries": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pogingen"
           }
         }
       }
     },
-    "Show all" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Toon alles"
+    "Retry interval": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Interval tussen pogingen"
           }
         }
       }
     },
-    "Show recent" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Toon recente"
+    "Ride active": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rit actief"
           }
         }
       }
     },
-    "Source code" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Broncode"
+    "Scan": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scan"
           }
         }
       }
     },
-    "Start free trial" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Start gratis proefperiode"
+    "Settings": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instellingen"
           }
         }
       }
     },
-    "Stop" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Stop"
+    "Show all": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toon alles"
           }
         }
       }
     },
-    "System" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Systeem"
+    "Show recent": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toon recente"
           }
         }
       }
     },
-    "The App Store did not return this product. Check your connection and try again." : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "De App Store gaf dit product niet terug. Controleer je verbinding en probeer het opnieuw."
+    "Source code": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Broncode"
           }
         }
       }
     },
-    "The Live Activity shows lock state, battery and the last event on the Lock Screen and in the Dynamic Island while a ride is active. It is updated on bike events only." : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "De Live Activity toont de slotstatus, de accu en de laatste gebeurtenis op het toegangsscherm en in het Dynamic Island zolang er een rit actief is. Hij wordt alleen bijgewerkt bij gebeurtenissen van de fiets."
+    "Start free trial": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start gratis proefperiode"
           }
         }
       }
     },
-    "The trial lasts 7 days. After it ends, automatic re-unlock stops; the manual buttons and the log keep working. Keep it forever for %@ (one-time purchase, no subscription)." : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "De proefperiode duurt 7 dagen. Daarna stopt het automatisch ontgrendelen; de knoppen en het logboek blijven werken. Houd het voor altijd voor %@ (eenmalige aankoop, geen abonnement)."
+    "Stop": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stop"
           }
         }
       }
     },
-    "Trial ended" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Proefperiode afgelopen"
+    "System": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Systeem"
           }
         }
       }
     },
-    "Trial ended, automatic unlock is off" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Proefperiode afgelopen, automatisch ontgrendelen staat uit"
+    "The App Store did not return this product. Check your connection and try again.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "De App Store gaf dit product niet terug. Controleer je verbinding en probeer het opnieuw."
           }
         }
       }
     },
-    "Trial ends %@" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Proefperiode eindigt %@"
+    "The Live Activity shows lock state, battery and the last event on the Lock Screen and in the Dynamic Island while a ride is active. It is updated on bike events only.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "De Live Activity toont de slotstatus, de accu en de laatste gebeurtenis op het toegangsscherm en in het Dynamic Island zolang er een rit actief is. Hij wordt alleen bijgewerkt bij gebeurtenissen van de fiets."
           }
         }
       }
     },
-    "Trial until %@" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Proefperiode tot %@"
+    "The trial lasts 7 days. After it ends, automatic re-unlock stops; the manual buttons and the log keep working. Keep it forever for %@ (one-time purchase, no subscription).": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "De proefperiode duurt 7 dagen. Daarna stopt het automatisch ontgrendelen; de knoppen en het logboek blijven werken. Houd het voor altijd voor %@ (eenmalige aankoop, geen abonnement)."
           }
         }
       }
     },
-    "Try Lasso free for 7 days" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Probeer Lasso 7 dagen gratis"
+    "Trial ended": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Proefperiode afgelopen"
           }
         }
       }
     },
-    "Try automatic re-unlock free for 7 days" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Probeer automatisch ontgrendelen 7 dagen gratis"
+    "Trial ended, automatic unlock is off": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Proefperiode afgelopen, automatisch ontgrendelen staat uit"
           }
         }
       }
     },
-    "Try with a demo bike" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Probeer met een demofiets"
+    "Trial ends %@": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Proefperiode eindigt %@"
           }
         }
       }
     },
-    "UNLOCKED" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ONTGRENDELD"
+    "Trial until %@": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Proefperiode tot %@"
           }
         }
       }
     },
-    "Undo any lock during a ride" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Elke vergrendeling tijdens een rit terugdraaien"
+    "Try Lasso free for 7 days": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Probeer Lasso 7 dagen gratis"
           }
         }
       }
     },
-    "Unlock" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ontgrendel"
+    "Try automatic re-unlock free for 7 days": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Probeer automatisch ontgrendelen 7 dagen gratis"
           }
         }
       }
     },
-    "Unlock write with response" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ontgrendeling schrijven met antwoord"
+    "Try with a demo bike": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Probeer met een demofiets"
           }
         }
       }
     },
-    "Unlocked" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ontgrendeld"
+    "UNLOCKED": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ONTGRENDELD"
           }
         }
       }
     },
-    "Unlocks the bike every time your phone connects to it, no matter how it got locked." : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ontgrendelt de fiets elke keer dat je telefoon verbinding maakt, hoe hij ook vergrendeld is geraakt."
+    "Undo any lock during a ride": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elke vergrendeling tijdens een rit terugdraaien"
           }
         }
       }
     },
-    "Version" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Versie"
+    "Unlock": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ontgrendel"
           }
         }
       }
     },
-    "Waiting for the bike" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wachten op de fiets"
+    "Unlock write with response": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ontgrendeling schrijven met antwoord"
           }
         }
       }
     },
-    "When the bike is re-unlocked" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Als de fiets weer ontgrendeld is"
+    "Unlocked": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ontgrendeld"
           }
         }
       }
     },
-    "Write with response, 1 s after reconnect, 3 retries every 2 s." : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Schrijven met antwoord, 1 s na herverbinden, 3 pogingen elke 2 s."
+    "Unlocks the bike every time your phone connects to it, no matter how it got locked.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ontgrendelt de fiets elke keer dat je telefoon verbinding maakt, hoe hij ook vergrendeld is geraakt."
           }
         }
       }
     },
-    "Write without response like the nRF fob, 0.5 s delay, 5 retries every 1 s." : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Schrijven zonder antwoord zoals de nRF-sleutelhanger, 0,5 s vertraging, 5 pogingen elke 1 s."
+    "Version": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Versie"
           }
         }
       }
     },
-    "You own Lasso. Thank you." : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lasso is van jou. Bedankt."
+    "Waiting for the bike": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wachten op de fiets"
           }
         }
       }
     },
-    "Your trial has ended" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Je proefperiode is afgelopen"
+    "When a Cowboy's battery cuts out mid-ride, the bike locks itself. Lasso notices within a second and unlocks it again, so you can keep riding.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Als de accu van een Cowboy tijdens het rijden uitvalt, vergrendelt de fiets zichzelf. Lasso merkt dat binnen een seconde en ontgrendelt hem opnieuw, zodat je door kunt rijden."
           }
         }
       }
     },
-    "battery" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "accu"
+    "When the bike is re-unlocked": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Als de fiets weer ontgrendeld is"
           }
         }
       }
     },
-    "filter.lock" : {
-      "comment" : "Log filter for lock and unlock events. Own key because the Lock button already uses \"Lock\".",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lock"
+    "Write with response, 1 s after reconnect, 3 retries every 2 s.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schrijven met antwoord, 1 s na herverbinden, 3 pogingen elke 2 s."
+          }
+        }
+      }
+    },
+    "Write without response like the nRF fob, 0.5 s delay, 5 retries every 1 s.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schrijven zonder antwoord zoals de nRF-sleutelhanger, 0,5 s vertraging, 5 pogingen elke 1 s."
+          }
+        }
+      }
+    },
+    "You own Lasso. Thank you.": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lasso is van jou. Bedankt."
+          }
+        }
+      }
+    },
+    "Your bike, unlocked again": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Je fiets, weer ontgrendeld"
+          }
+        }
+      }
+    },
+    "Your trial has ended": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Je proefperiode is afgelopen"
+          }
+        }
+      }
+    },
+    "battery": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "accu"
+          }
+        }
+      }
+    },
+    "filter.lock": {
+      "comment": "Log filter for lock and unlock events. Own key because the Lock button already uses \"Lock\".",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lock"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Slot"
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Slot"
           }
         }
       }
     },
-    "now" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "nu"
+    "now": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "nu"
           }
         }
       }
     },
-    "power" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "vermogen"
+    "power": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "vermogen"
           }
         }
       }
     },
-    "since %@" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "sinds %@"
+    "since %@": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "sinds %@"
           }
         }
       }
     },
-    "speed" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "snelheid"
+    "speed": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "snelheid"
           }
         }
       }
     },
-    "temp" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "temp"
+    "temp": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "temp"
           }
         }
       }
     },
-    "trip" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "rit"
+    "trip": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "rit"
           }
         }
       }
     },
-    "voltage" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "spanning"
+    "voltage": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "spanning"
           }
         }
       }
     }
   },
-  "version" : "1.0"
+  "version": "1.0"
 }

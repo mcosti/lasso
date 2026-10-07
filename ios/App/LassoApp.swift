@@ -27,6 +27,8 @@ struct RootView: View {
     @ViewBuilder private var content: some View {
         if Demo.isActive && Demo.screen == "lockscreen" {
             DemoLockScreen()
+        } else if !settings.onboardingDone && !Demo.launched {
+            OnboardingView(settings: settings)
         } else {
             ContentView()
                 .preferredColorScheme(.dark)
@@ -45,9 +47,7 @@ final class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCent
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         UNUserNotificationCenter.current().delegate = self
-        if !Demo.isActive {
-            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { _, _ in }
-        }
+        // Notification permission is asked in the onboarding (or from Settings), not here.
         // Before the bike connects, so the first policy decision knows the access.
         Store.shared.configure()
         // Creating the manager is what (re)establishes the pending connection,

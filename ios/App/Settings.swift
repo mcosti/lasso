@@ -107,7 +107,9 @@ final class AppSettings: ObservableObject {
     @AppStorage("dryRun") var dryRun = false
     /// Shows the Testing section in Settings. Toggled by tapping Version 7 times.
     @AppStorage("developerMode") var developerMode = false
-    /// The paywall was presented once on first launch.
+    /// The onboarding pages were completed (or skipped) once.
+    @AppStorage("onboardingDone") var onboardingDone = false
+    /// The trial terms were presented once, when the first bike was paired.
     @AppStorage("paywallShown") var paywallShown = false
     /// "system", "en" or "nl". Read by `L10n` and the root view's locale.
     @AppStorage("appLanguage") var appLanguage = "system"
