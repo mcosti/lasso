@@ -1,0 +1,23 @@
+# Xcode (any depth)
+*.xcodeproj/
+build/
+DerivedData/
+xcuserdata/
+*.xcresult
+ios/build/
+
+# macOS
+.DS_Store
+
+# Local config, never committed (team id, API keys)
+*.xcconfig.local
+
+# Android
+android/.gradle/
+android/local.properties
+android/**/build/
+
+# Note: marketing/screenshots/captured/ is committed on purpose.
+
+# Private repo (marketing, internal docs, store copy, signing), nested with its own .git
+private/
