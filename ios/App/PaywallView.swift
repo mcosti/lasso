@@ -123,6 +123,9 @@ struct PaywallView: View {
         Task {
             do {
                 try await action()
+                // Starting the trial drops the user straight back on the home
+                // screen; Lifetime stays open to show the thank-you state.
+                if case .trial = store.access { dismiss() }
             } catch where !Store.isCancellation(error) {
                 self.error = error.localizedDescription
             } catch {}

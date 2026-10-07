@@ -36,9 +36,10 @@ final class PurchaseFlowTests: XCTestCase {
         app.buttons["Start free trial"].tap()
         chooseSuccessfulPurchase(in: app)
 
-        // 2. Trial running: banner on the home screen.
-        let banner = app.staticTexts.matching(NSPredicate(format: "label CONTAINS 'days left'")).firstMatch
-        XCTAssertTrue(banner.waitForExistence(timeout: 25))
+        // 2. Trial running: the paywall closes and the log records it. (The
+        // "days left" banner only appears once a bike is paired.)
+        let logged = app.staticTexts.matching(NSPredicate(format: "label CONTAINS 'Free trial started'")).firstMatch
+        XCTAssertTrue(logged.waitForExistence(timeout: 25))
         sleep(4)
 
         // 3. Settings shows the purchase state; tapping it opens the paywall.
