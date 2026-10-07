@@ -2,11 +2,16 @@
 
 Your Cowboy e-bike unlocks itself again, automatically.
 
-An ageing battery can drop out for a moment mid-ride. The bike reboots locked,
-the motor is gone, and the official app's Auto Unlock does not kick in again,
-so you stop and hold the button in traffic. Lasso keeps a Bluetooth connection
-to the bike in the background, notices the drop, and sends the unlock within
-about a second of the bike coming back.
+Lasso is made for one specific problem: a Cowboy with a **faulty battery**.
+When cells are out of balance, worn, or a contact is tired, the pack can cut
+out for a moment under load. The bike loses power, reboots locked, drops the
+Bluetooth connection, and the motor is gone. The official app's Auto Unlock
+does not kick in again mid-ride, so you stop and hold the button in traffic.
+Lasso keeps a Bluetooth connection to the bike in the background, notices the
+drop, and sends the unlock within about a second of the bike coming back.
+
+A new battery is the real fix. Lasso is the cheap way to keep riding the old
+one safely until then, and its log shows how often the pack actually drops.
 
 Website: https://lasso-bike.vercel.app · Support: https://lasso-bike.vercel.app/support
 
