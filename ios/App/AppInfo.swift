@@ -7,7 +7,7 @@ enum AppInfo {
     /// Shown in Settings; the app is an independent project.
     static let disclaimer = "Lasso is an independent app and is not affiliated with or endorsed by Cowboy SA. Cowboy is a trademark of its owner."
     /// Empty hides the support button (open-source builds).
-    static let supportEmail = ""
+    static let supportEmail = "contact@costi.pro"
     static var version: String {
         let v = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "?"
         let b = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "?"
