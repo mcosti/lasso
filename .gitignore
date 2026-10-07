@@ -21,3 +21,6 @@ android/**/build/
 
 # Not part of this repository
 private/
+
+# Apple keys, never committed
+*.p8
